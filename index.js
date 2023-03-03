@@ -104,8 +104,9 @@ console.log(bircumle);
 	
 	function cumlelereDonustur(cumleDizi, ayrac){
 		return cumleDizi.map(kelime => kelime.join(ayrac));
-		}
-		console.log(cumlelereDonustur(cumleler, " "))
+	}
+	
+	console.log(cumlelereDonustur(cumleler, " "))
 
 
 
@@ -119,11 +120,14 @@ console.log(bircumle);
 			6. Oluşturulan paragraf döndürülecek
 	*/
 	
-function paragrafOlustur(cumlelerParam,cumleKurParam, cumlelereDonusturParam ){
-	/* kodlar buraya */ 
-	let cumleDizi =cumlelereDonusturParam (cumlelerParam," ");
-	return cumleKurParam(cumleDizi[1],cumleDizi[3],cumleDizi[5],cumleDizi[7],cumleDizi[9])
+
+
+function paragrafOlustur(cumlelerParam,cumleKurParam, cumlelereDonusturParam){
+	let yeniDizi = cumlelereDonusturParam(cumlelerParam," ");
+	let paragraf = cumleKurParam(yeniDizi[1],yeniDizi[3],yeniDizi[5],yeniDizi[7],yeniDizi[9]);
+	return paragraf;
 }
+
 
 
 /* 	GÖREV 3:
@@ -137,7 +141,6 @@ meyveler.shift();
 console.log(meyveler);
 meyveler.pop();
 console.log(meyveler);
-
 
 
  
@@ -173,11 +176,22 @@ console.log(manav);
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(/* kodlar buraya */){
-/* kodlar buraya */
-
-}
-
+			function emojileriDonustur(messageStr, emojiObj) {
+				/* kodlar buraya */
+				let symbol = Object.keys(emojiObj);
+				let emojiValue = Object.values(emojiObj);
+				console.log(symbol);
+				for (let i = 0; i < symbol.length; i++) {
+				  messageStr = messageStr.replaceAll(symbol[i].toUpperCase(), emojiValue[i]);
+				  messageStr = messageStr.replaceAll(symbol[i].toLowerCase(), emojiValue[i]);
+				}
+				return messageStr;
+			}
+			  emojileriDonustur(
+				"Hello World! :p Bugün ödevi erken bitirdiğim için çok mutluyum :D ama kod yazmaya, öğrenmeye devam :O Teşekkürler Workintech ! <3",
+				emojiler
+			  );
+			  
 
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
