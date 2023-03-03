@@ -176,23 +176,19 @@ console.log(manav);
 			4. elde edilen string döndürülecek
  */
 
-			function emojileriDonustur(messageStr, emojiObj) {
+function emojileriDonustur(messageStr, emojiObj) {
 				/* kodlar buraya */
-				let symbol = Object.keys(emojiObj);
-				let emojiValue = Object.values(emojiObj);
-				console.log(symbol);
-				for (let i = 0; i < symbol.length; i++) {
-				  messageStr = messageStr.replaceAll(symbol[i].toUpperCase(), emojiValue[i]);
-				  messageStr = messageStr.replaceAll(symbol[i].toLowerCase(), emojiValue[i]);
-				}
-				return messageStr;
-			}
-			  emojileriDonustur(
-				"Hello World! :p Bugün ödevi erken bitirdiğim için çok mutluyum :D ama kod yazmaya, öğrenmeye devam :O Teşekkürler Workintech ! <3",
-				emojiler
-			  );
+let symbol = Object.keys(emojiObj);
+let emojiValue = Object.values(emojiObj);
+		
+	for (let i = 0; i < symbol.length; i++) {
+		messageStr = messageStr.replaceAll(symbol[i].toUpperCase(), emojiValue[i]);
+		messageStr = messageStr.replaceAll(symbol[i].toLowerCase(), emojiValue[i]);
+	}
+			return messageStr;
+}
+console.log(emojileriDonustur("Hello World! :p Bugün ödevi erken bitirdiğim için çok mutluyum :D ama kod yazmaya, öğrenmeye devam :O Teşekkürler Workintech ! <3",emojiler));
 			  
-
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa(){
