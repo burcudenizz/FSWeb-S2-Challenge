@@ -119,9 +119,10 @@ console.log(bircumle);
 			6. Oluşturulan paragraf döndürülecek
 	*/
 	
-function paragrafOlustur(cumleParam,ornekFonk, gorevBirFonk ){
+function paragrafOlustur(cumlelerParam,cumleKurParam, cumlelereDonusturParam ){
 	/* kodlar buraya */ 
-	ornekFonk(cumleParam)
+	let cumleDizi =cumlelereDonusturParam (cumlelerParam," ");
+	return cumleKurParam(cumleDizi[1],cumleDizi[3],cumleDizi[5],cumleDizi[7],cumleDizi[9])
 }
 
 
@@ -132,7 +133,10 @@ function paragrafOlustur(cumleParam,ornekFonk, gorevBirFonk ){
 //3a çözümü
 /* kodlar buraya */
 
-
+meyveler.shift();
+console.log(meyveler);
+meyveler.pop();
+console.log(meyveler);
 
 
 
@@ -143,10 +147,9 @@ function paragrafOlustur(cumleParam,ornekFonk, gorevBirFonk ){
 /* kodlar buraya */
 
 
-
-
-
-
+sebzeler.unshift("🐇");
+sebzeler.push("🦔");
+console.log(sebzeler);
 
 
 /* 			3c. manav isminde bir dizi oluşturun.`meyveler` dizisi ilk elemanlara, `sebzeler` dizisi son elemanlara denk gelecek şekilde, iki diziyi birleştirip sonucu manav dizisine aktarın. (.concat metodu)
@@ -156,8 +159,8 @@ function paragrafOlustur(cumleParam,ornekFonk, gorevBirFonk ){
 
 var manav;
 
-
-
+manav = meyveler.concat(sebzeler);
+console.log(manav);
 
 
 /* 	GÖREV 4:
